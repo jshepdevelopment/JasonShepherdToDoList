@@ -15,7 +15,9 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     
    
     @IBAction func myButton(sender: AnyObject) {
-        myLabel.text = myTextField.text
+        toDoList.append(myTextField.text!)
+        myTextField.text=""
+        
     }
 
  
