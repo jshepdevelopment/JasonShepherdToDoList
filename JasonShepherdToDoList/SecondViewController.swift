@@ -18,6 +18,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         toDoList.append(myTextField.text!)
         myTextField.text=""
         
+        NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
+        
     }
 
  

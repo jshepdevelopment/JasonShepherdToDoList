@@ -16,7 +16,12 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Synchs with permanent storage
+        if NSUserDefaults.standardUserDefaults().objectForKey("toDoList") != nil {
+            toDoList = NSUserDefaults.standardUserDefaults().objectForKey("toDoList") as! [String]
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,6 +42,20 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     
     override func viewDidAppear(animated: Bool) {
         toDoListTable.reloadData()
+    }
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            
+            // Remove from array
+            toDoList.removeAtIndex(indexPath.row)
+            
+            // Update storage and reload
+            NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
+            toDoListTable.reloadData()
+            
+        }
+
     }
 
 }
