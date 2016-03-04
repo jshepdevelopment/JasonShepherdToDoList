@@ -5,7 +5,6 @@
 //  Created by Jason Shepherd on 3/4/16.
 //  Copyright © 2016 Salt Lake Community College. All rights reserved.
 //
-// Testing Git username
 
 import UIKit
 
