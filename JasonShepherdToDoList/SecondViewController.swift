@@ -10,6 +10,8 @@ import UIKit
 
 class SecondViewController: UIViewController, UITextFieldDelegate {
 
+    var importanceFlagBuffer = 0
+    
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var myTextField: UITextField!
    
@@ -19,21 +21,31 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         toDoList.append(myTextField.text!)
         myTextField.text=""
         NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
+    
+        if importanceFlagBuffer == 1 {
+            importanceFlag.append(1)
+        }
+        if importanceFlagBuffer == 2 {
+            importanceFlag.append(2)
+        }
+        if importanceFlagBuffer == 3 {
+            importanceFlag.append(3)
+        }
     }
 
  
     @IBAction func greenButton(sender: AnyObject) {
-        
+        importanceFlagBuffer = 1
         importanceLabel.text = "Not very."
     }
     
     @IBAction func yellowButton(sender: AnyObject) {
-        
+        importanceFlagBuffer = 2
         importanceLabel.text = "Kinda."
     }
     
     @IBAction func redButton(sender: AnyObject) {
-        
+        importanceFlagBuffer = 3
         importanceLabel.text = "Super duper."
     }
     

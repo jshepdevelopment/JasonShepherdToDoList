@@ -10,9 +10,13 @@
 import UIKit
 
 var toDoList = [String]()
+var importanceFlag = [Int]()
+
 
 class FirstViewController: UIViewController, UITableViewDelegate {
 
+   var redImage : UIImage = UIImage(named: "red")!
+    
     @IBOutlet weak var toDoListTable: UITableView!
     
     override func viewDidLoad() {
@@ -37,7 +41,15 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         
-        cell.textLabel?.text = toDoList[indexPath.row]
+        if importanceFlag[indexPath.row] == 3 {
+            cell.imageView!.image = redImage
+        }
+        
+        //cell.textLabel?.text = toDoList[indexPath.row]
+        cell.textLabel?.text = toDoList[indexPath.row] + "\(importanceFlag[indexPath.row])"
+        
+
+        
         return cell
     }
     
