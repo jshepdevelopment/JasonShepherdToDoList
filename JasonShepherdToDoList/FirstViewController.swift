@@ -15,7 +15,9 @@ var importanceFlag = [Int]()
 
 class FirstViewController: UIViewController, UITableViewDelegate {
 
-   var redImage : UIImage = UIImage(named: "red")!
+    var redImage : UIImage = UIImage(named: "red")!
+    var yellowImage : UIImage = UIImage(named: "yellow")!
+    var greenImage : UIImage = UIImage(named: "green")!
     
     @IBOutlet weak var toDoListTable: UITableView!
     
@@ -44,9 +46,15 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         if importanceFlag[indexPath.row] == 3 {
             cell.imageView!.image = redImage
         }
+        if importanceFlag[indexPath.row] == 2 {
+            cell.imageView!.image = yellowImage
+        }
+        if importanceFlag[indexPath.row] == 1 {
+            cell.imageView!.image = greenImage
+        }
         
         //cell.textLabel?.text = toDoList[indexPath.row]
-        cell.textLabel?.text = toDoList[indexPath.row] + "\(importanceFlag[indexPath.row])"
+        cell.textLabel?.text = toDoList[indexPath.row]
         
 
         
