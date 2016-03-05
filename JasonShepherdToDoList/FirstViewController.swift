@@ -25,6 +25,11 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         super.viewDidLoad()
         
         // Synchs with permanent storage
+      
+        if NSUserDefaults.standardUserDefaults().objectForKey("importanceFlags") != nil {
+            importanceFlag = NSUserDefaults.standardUserDefaults().objectForKey("importanceFlags") as! [Int]
+        }
+        
         if NSUserDefaults.standardUserDefaults().objectForKey("toDoList") != nil {
             toDoList = NSUserDefaults.standardUserDefaults().objectForKey("toDoList") as! [String]
         }
@@ -43,6 +48,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
         
+        // Check importance flag and assign image value to cell
         if importanceFlag[indexPath.row] == 3 {
             cell.imageView!.image = redImage
         }
@@ -56,8 +62,6 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         //cell.textLabel?.text = toDoList[indexPath.row]
         cell.textLabel?.text = toDoList[indexPath.row]
         
-
-        
         return cell
     }
     
@@ -70,9 +74,13 @@ class FirstViewController: UIViewController, UITableViewDelegate {
             
             // Remove from array
             toDoList.removeAtIndex(indexPath.row)
+            importanceFlag.removeAtIndex(indexPath.row)
             
             // Update storage and reload
+            NSUserDefaults.standardUserDefaults().setObject(importanceFlag, forKey: "importanceFlags")
             NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
+
+
             toDoListTable.reloadData()
             
         }

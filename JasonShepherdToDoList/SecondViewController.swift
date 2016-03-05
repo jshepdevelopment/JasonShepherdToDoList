@@ -18,10 +18,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var importanceLabel: UILabel!
     
     @IBAction func myButton(sender: AnyObject) {
-        toDoList.append(myTextField.text!)
-        myTextField.text=""
-        NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
-    
+        
+        // Append value to importanceFlag array based on buffer
         if importanceFlagBuffer == 1 {
             importanceFlag.append(1)
         }
@@ -31,6 +29,15 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         if importanceFlagBuffer == 3 {
             importanceFlag.append(3)
         }
+        
+        // Append text to myTextField array
+        toDoList.append(myTextField.text!)
+        myTextField.text=""
+        
+        // Update keys
+        NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
+        NSUserDefaults.standardUserDefaults().setObject(importanceFlag, forKey: "importanceFlags")
+    
     }
 
  
