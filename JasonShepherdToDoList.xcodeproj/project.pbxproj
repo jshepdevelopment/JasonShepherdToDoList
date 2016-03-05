@@ -15,6 +15,11 @@
 		04715DD31C8A24F700616DC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04715DD11C8A24F700616DC0 /* LaunchScreen.storyboard */; };
 		04715DDE1C8A24F800616DC0 /* JasonShepherdToDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04715DDD1C8A24F800616DC0 /* JasonShepherdToDoListTests.swift */; };
 		04715DE91C8A24F800616DC0 /* JasonShepherdToDoListUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04715DE81C8A24F800616DC0 /* JasonShepherdToDoListUITests.swift */; };
+		04715DFD1C8A7E6A00616DC0 /* GreenButton-Active.png in Resources */ = {isa = PBXBuildFile; fileRef = 04715DF71C8A7E6A00616DC0 /* GreenButton-Active.png */; };
+		04715DFF1C8A7E6A00616DC0 /* RedButton-Active.png in Resources */ = {isa = PBXBuildFile; fileRef = 04715DF91C8A7E6A00616DC0 /* RedButton-Active.png */; };
+		04715E011C8A7E6A00616DC0 /* YellowButton-Active.png in Resources */ = {isa = PBXBuildFile; fileRef = 04715DFB1C8A7E6A00616DC0 /* YellowButton-Active.png */; };
+		04715E041C8A8F0000616DC0 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 04715E031C8A8F0000616DC0 /* add.png */; };
+		04715E0A1C8A922600616DC0 /* addlist.png in Resources */ = {isa = PBXBuildFile; fileRef = 04715E091C8A922600616DC0 /* addlist.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		04715DE41C8A24F800616DC0 /* JasonShepherdToDoListUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JasonShepherdToDoListUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04715DE81C8A24F800616DC0 /* JasonShepherdToDoListUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JasonShepherdToDoListUITests.swift; sourceTree = "<group>"; };
 		04715DEA1C8A24F800616DC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04715DF71C8A7E6A00616DC0 /* GreenButton-Active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenButton-Active.png"; sourceTree = "<group>"; };
+		04715DF91C8A7E6A00616DC0 /* RedButton-Active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RedButton-Active.png"; sourceTree = "<group>"; };
+		04715DFB1C8A7E6A00616DC0 /* YellowButton-Active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YellowButton-Active.png"; sourceTree = "<group>"; };
+		04715E031C8A8F0000616DC0 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
+		04715E091C8A922600616DC0 /* addlist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addlist.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +109,7 @@
 		04715DC51C8A24F700616DC0 /* JasonShepherdToDoList */ = {
 			isa = PBXGroup;
 			children = (
+				04715DF61C8A7E4400616DC0 /* assets */,
 				04715DC61C8A24F700616DC0 /* AppDelegate.swift */,
 				04715DC81C8A24F700616DC0 /* FirstViewController.swift */,
 				04715DCA1C8A24F700616DC0 /* SecondViewController.swift */,
@@ -126,6 +137,18 @@
 				04715DEA1C8A24F800616DC0 /* Info.plist */,
 			);
 			path = JasonShepherdToDoListUITests;
+			sourceTree = "<group>";
+		};
+		04715DF61C8A7E4400616DC0 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				04715E091C8A922600616DC0 /* addlist.png */,
+				04715E031C8A8F0000616DC0 /* add.png */,
+				04715DF71C8A7E6A00616DC0 /* GreenButton-Active.png */,
+				04715DF91C8A7E6A00616DC0 /* RedButton-Active.png */,
+				04715DFB1C8A7E6A00616DC0 /* YellowButton-Active.png */,
+			);
+			name = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +255,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04715E041C8A8F0000616DC0 /* add.png in Resources */,
 				04715DD31C8A24F700616DC0 /* LaunchScreen.storyboard in Resources */,
+				04715E0A1C8A922600616DC0 /* addlist.png in Resources */,
 				04715DD01C8A24F700616DC0 /* Assets.xcassets in Resources */,
 				04715DCE1C8A24F700616DC0 /* Main.storyboard in Resources */,
+				04715E011C8A7E6A00616DC0 /* YellowButton-Active.png in Resources */,
+				04715DFD1C8A7E6A00616DC0 /* GreenButton-Active.png in Resources */,
+				04715DFF1C8A7E6A00616DC0 /* RedButton-Active.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +514,7 @@
 				04715DEF1C8A24F800616DC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04715DF01C8A24F800616DC0 /* Build configuration list for PBXNativeTarget "JasonShepherdToDoListTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +523,7 @@
 				04715DF21C8A24F800616DC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04715DF31C8A24F800616DC0 /* Build configuration list for PBXNativeTarget "JasonShepherdToDoListUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +532,7 @@
 				04715DF51C8A24F800616DC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

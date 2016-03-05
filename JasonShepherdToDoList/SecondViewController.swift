@@ -12,17 +12,31 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var myLabel: UILabel!
     @IBOutlet weak var myTextField: UITextField!
-    
    
+    @IBOutlet weak var importanceLabel: UILabel!
+    
     @IBAction func myButton(sender: AnyObject) {
         toDoList.append(myTextField.text!)
         myTextField.text=""
-        
         NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
-        
     }
 
  
+    @IBAction func greenButton(sender: AnyObject) {
+        
+        importanceLabel.text = "Not very."
+    }
+    
+    @IBAction func yellowButton(sender: AnyObject) {
+        
+        importanceLabel.text = "Kinda."
+    }
+    
+    @IBAction func redButton(sender: AnyObject) {
+        
+        importanceLabel.text = "Super duper."
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
