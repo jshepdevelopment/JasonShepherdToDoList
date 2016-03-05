@@ -18,8 +18,9 @@
 		04715DFD1C8A7E6A00616DC0 /* GreenButton-Active.png in Resources */ = {isa = PBXBuildFile; fileRef = 04715DF71C8A7E6A00616DC0 /* GreenButton-Active.png */; };
 		04715DFF1C8A7E6A00616DC0 /* RedButton-Active.png in Resources */ = {isa = PBXBuildFile; fileRef = 04715DF91C8A7E6A00616DC0 /* RedButton-Active.png */; };
 		04715E011C8A7E6A00616DC0 /* YellowButton-Active.png in Resources */ = {isa = PBXBuildFile; fileRef = 04715DFB1C8A7E6A00616DC0 /* YellowButton-Active.png */; };
-		04715E041C8A8F0000616DC0 /* add.png in Resources */ = {isa = PBXBuildFile; fileRef = 04715E031C8A8F0000616DC0 /* add.png */; };
 		04715E0A1C8A922600616DC0 /* addlist.png in Resources */ = {isa = PBXBuildFile; fileRef = 04715E091C8A922600616DC0 /* addlist.png */; };
+		04715E0C1C8A92D900616DC0 /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 04715E0B1C8A92D900616DC0 /* list.png */; };
+		04715E0E1C8A97BF00616DC0 /* update.png in Resources */ = {isa = PBXBuildFile; fileRef = 04715E0D1C8A97BF00616DC0 /* update.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +58,9 @@
 		04715DF71C8A7E6A00616DC0 /* GreenButton-Active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GreenButton-Active.png"; sourceTree = "<group>"; };
 		04715DF91C8A7E6A00616DC0 /* RedButton-Active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RedButton-Active.png"; sourceTree = "<group>"; };
 		04715DFB1C8A7E6A00616DC0 /* YellowButton-Active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "YellowButton-Active.png"; sourceTree = "<group>"; };
-		04715E031C8A8F0000616DC0 /* add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add.png; sourceTree = "<group>"; };
 		04715E091C8A922600616DC0 /* addlist.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addlist.png; sourceTree = "<group>"; };
+		04715E0B1C8A92D900616DC0 /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
+		04715E0D1C8A97BF00616DC0 /* update.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = update.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,8 +144,9 @@
 		04715DF61C8A7E4400616DC0 /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				04715E0D1C8A97BF00616DC0 /* update.png */,
+				04715E0B1C8A92D900616DC0 /* list.png */,
 				04715E091C8A922600616DC0 /* addlist.png */,
-				04715E031C8A8F0000616DC0 /* add.png */,
 				04715DF71C8A7E6A00616DC0 /* GreenButton-Active.png */,
 				04715DF91C8A7E6A00616DC0 /* RedButton-Active.png */,
 				04715DFB1C8A7E6A00616DC0 /* YellowButton-Active.png */,
@@ -255,13 +258,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04715E041C8A8F0000616DC0 /* add.png in Resources */,
 				04715DD31C8A24F700616DC0 /* LaunchScreen.storyboard in Resources */,
+				04715E0C1C8A92D900616DC0 /* list.png in Resources */,
 				04715E0A1C8A922600616DC0 /* addlist.png in Resources */,
 				04715DD01C8A24F700616DC0 /* Assets.xcassets in Resources */,
 				04715DCE1C8A24F700616DC0 /* Main.storyboard in Resources */,
 				04715E011C8A7E6A00616DC0 /* YellowButton-Active.png in Resources */,
 				04715DFD1C8A7E6A00616DC0 /* GreenButton-Active.png in Resources */,
+				04715E0E1C8A97BF00616DC0 /* update.png in Resources */,
 				04715DFF1C8A7E6A00616DC0 /* RedButton-Active.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
