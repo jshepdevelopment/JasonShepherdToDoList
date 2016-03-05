@@ -19,6 +19,21 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     var yellowImage : UIImage = UIImage(named: "yellow")!
     var greenImage : UIImage = UIImage(named: "green")!
     
+    @IBAction func kaBlamo(sender: AnyObject) {
+        toDoList.removeAll()
+        importanceFlag.removeAll()
+        // Update storage and reload
+        NSUserDefaults.standardUserDefaults().setObject(importanceFlag, forKey: "importanceFlags")
+        NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
+        
+        
+        toDoListTable.reloadData()
+    }
+    
+    @IBAction func alphaSortButton(sender: AnyObject) {
+        sortList()
+    }
+    
     @IBOutlet weak var toDoListTable: UITableView!
     
     override func viewDidLoad() {
@@ -86,6 +101,48 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         }
 
     }
+    
+    // Allow row sorting
+    func sortList() {
+        if toDoListTable.editing == true {
+            toDoListTable.setEditing(false, animated: true)
+        } else {
+            toDoListTable.setEditing(true, animated: true)
+            
+        }
+        // Update storage and reload
+        NSUserDefaults.standardUserDefaults().setObject(importanceFlag, forKey: "importanceFlags")
+        NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
+        
+    }
+
+    // Check if specific row can move
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
+    
+    // Remove indent while editing
+    func tableView(tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
+    }
+    
+    
+    // Uodate arrays according to table positions
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        
+        let itemToMove = toDoList[sourceIndexPath.row]
+        let itemToMove2 = importanceFlag[sourceIndexPath.row]
+        
+        
+        toDoList.removeAtIndex(sourceIndexPath.row)
+        toDoList.insert(itemToMove, atIndex: destinationIndexPath.row)
+        
+        importanceFlag.removeAtIndex(sourceIndexPath.row)
+        importanceFlag.insert(itemToMove2, atIndex: destinationIndexPath.row)
+        
+        
+    }
+    
 
 }
 
